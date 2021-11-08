@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import swal from "sweetalert"
+import logo from "./logo.svg"
+import loading from "./loading.svg"
+import styles from "./App.module.css"
+import Button from "./Button"
+import { shuffleArray, getRandomNumber } from "./utils"
 
-function App() {
+// Get token from https://developer.spotify.com/console/get-current-user-saved-tracks/
+const apiToken = "<<Copiez le token de Spotify ici>>"
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className={styles.app}>
+      <header className={styles.appHeader}>
+        <img src={logo} className={styles.appLogo} alt="logo" />
+        <h1 className={styles.appTitle}>Bienvenue sur le Blindtest</h1>
+        <p>Il va falloir modifier le code pour faire un vrai Blindtest !</p>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a className={styles.appLink} href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
           Learn React
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
